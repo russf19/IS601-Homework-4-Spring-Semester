@@ -1,4 +1,5 @@
-'''Testing My Calculator'''
+'''My Calculator'''
+
 class Calculator
 def __init__(self):
     self.history = []
@@ -28,7 +29,3 @@ def __init__(self):
     def get_history(self):
         return self.history
     
-    def menu():
-        calculator = Calculator()
-        while True:
-            print
