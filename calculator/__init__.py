@@ -1,6 +1,6 @@
 '''My Calculator'''
 
-class Calculator
+class Calculator:
 def __init__(self):
     self.history = []
 
@@ -26,6 +26,6 @@ def __init__(self):
         self.history.append((f"[a] / [b]", result))
         return result
     
-    def get_history(self):
+    def history(self):
         return self.history
     

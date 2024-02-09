@@ -13,3 +13,10 @@ def test_multiplication():
 def test_division():
     assert divide(6,2) == 3
 
+def test_history(calc):
+    calc.add(2,2)
+    calc.subtract(2,2)
+    calc.multiply(3,3)
+    calc.divide(6,2)
+    assert len(calc.get_history()) == 4
+    assert calc.get_history()[0] == "2 + 2 = 4"
