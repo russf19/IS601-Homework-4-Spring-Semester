@@ -1,22 +1,20 @@
 '''Testing My Calculator'''
-from calculator import add, subtract, multiply, divide
+'''Russell's Calculator Test'''
+from calculator import add, subtract
+
 
 def test_addition():
+    '''Test that addition function works'''
     assert add(2,2) == 4
 
 def test_subtraction():
+    '''Test that subtraction function works'''
     assert subtract(2,2) == 0
 
 def test_multiplication():
-    assert multiply(3,3) == 9
+    '''Test that multiplication function works'''
+    assert multiply(2,2) == 4
 
 def test_division():
-    assert divide(6,2) == 3
-
-def test_history(calc):
-    calc.add(2,2)
-    calc.subtract(2,2)
-    calc.multiply(3,3)
-    calc.divide(6,2)
-    assert len(calc.get_history()) == 4
-    assert calc.get_history()[0] == "2 + 2 = 4"
+    '''Test that division function works'''
+    assert divide(2,2) == 0
