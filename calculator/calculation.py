@@ -13,14 +13,14 @@ class Calculation:
     # adds subtraction operation to calculator
     def subtract(a, b):
         result = a - b
-        History.add_history(f"Subtracted {a} to {b} got {result}")
+        History.add_history(f"Subtracted {a} from {b} got {result}")
         return result
 
     @staticmethod
     # adds multiplication operation to calculator
     def multiply(a, b):
         result = a * b
-        History.add_history(f"Multiplied {a} to {b} got {result}")
+        History.add_history(f"Multiplied {a} by {b} got {result}")
         return result
 
     @staticmethod
@@ -29,5 +29,5 @@ class Calculation:
         if b == 0:
             raise ZeroDivisionError("Cannot divide by zero.")
         result = a / b
-        History.add_history(f"Divided {a} to {b} got {result}")
+        History.add_history(f"Divided {a} by {b} got {result}")
         return result
