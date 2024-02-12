@@ -31,3 +31,4 @@ class Calculation:
         result = a / b
         History.add_history(f"Divided {a} by {b} got {result}")
         return result
+    

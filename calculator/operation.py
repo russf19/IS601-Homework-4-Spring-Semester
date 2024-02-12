@@ -15,10 +15,10 @@ class Operation:
             raise ValueError("Invalid operation.")
         
         result = operations[operation](a, b)
-        History.add_record(operation, result)
+        History.add_history(operation, result)
         return result
 
     @staticmethod
     def get_last_calculation() -> str:
-        operation, result = History.get_last_record()
+        operation, result = History.get_history()
         return f"Last {operation}: {result}"
