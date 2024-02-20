@@ -1,18 +1,19 @@
 # conftest.py
-import pytest
 from decimal import Decimal
+import pytest
 from faker import Faker
-from calculator import calculation
+from calculator.calculation import Calculation
+from calculator.operation import Operation
 
 fake = Faker()
 
 def generate_test_data(num_records):
     # Define operation mappings for both Calculator and Calculation tests
     operation_mappings = {
-        'add': add,
-        'subtract': subtract,
-        'multiply': multiply,
-        'divide': divide
+        'add': Calculation.add,
+        'subtract': Calculation.subtract,
+        'multiply': Calculation.multiply,
+        'divide': Calculation.divide
     }
     # Generate test data
     for _ in range(num_records):
@@ -22,11 +23,11 @@ def generate_test_data(num_records):
         operation_func = operation_mappings[operation_name]
         
         # Ensure b is not zero for divide operation to prevent division by zero in expected calculation
-        if operation_func == divide:
+        if operation_func == Calculation.divide:
             b = Decimal('1') if b == Decimal('0') else b
         
         try:
-            if operation_func == divide and b == Decimal('0'):
+            if operation_func == Calculation.divide and b == Decimal('0'):
                 expected = "ZeroDivisionError"
             else:
                 expected = operation_func(a, b)

@@ -1,3 +1,4 @@
+from decimal import Decimal
 from calculator.calculation import Calculation
 from calculator.history import History
 
