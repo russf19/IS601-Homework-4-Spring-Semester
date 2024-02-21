@@ -4,8 +4,7 @@ from calculation import Calculation
 from decimal import Decimal, InvalidOperation
 
 def calculate_and_print(a, b, operation_name):
-    operation_mappings = 
-    {
+    operation_mappings = {
         'add': Calculation.add,
         'subtract': Calculation.subtract,
         'multiply': Calculation.multiply,

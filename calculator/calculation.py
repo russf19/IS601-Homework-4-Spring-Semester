@@ -1,4 +1,3 @@
-from decimal import Decimal
 from calculator.history import History
 
 class Calculation:

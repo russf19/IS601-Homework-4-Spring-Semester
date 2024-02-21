@@ -1,4 +1,3 @@
-from decimal import Decimal
 import pytest
 from calculator.history import History
 from calculator.calculation import Calculation
