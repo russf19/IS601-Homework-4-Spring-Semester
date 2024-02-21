@@ -1,6 +1,5 @@
 import sys
-from operation import Operation
-from calculation import Calculation
+from calculator.calculation import Calculation
 from decimal import Decimal, InvalidOperation
 
 def calculate_and_print(a, b, operation_name):

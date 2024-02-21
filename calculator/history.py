@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 class History:
     _history = []
 

@@ -1,4 +1,5 @@
 import pytest
+from decimal import Decimal
 from calculator.history import History
 from calculator.calculation import Calculation
 
